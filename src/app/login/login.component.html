@@ -1,0 +1,53 @@
+<h2>Login</h2>
+<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <!-- [class.is-invalid]="!username.valid && errorShow" -->
+        <input type="text"
+                id = "username"
+                name = "username"
+                class="form-control"
+                [(ngModel)]="u.username"
+                required/>
+        <!-- <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div> -->
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <!-- [class.is-invalid]="!password.valid && errorShow" -->
+        <input  type="password"
+                id = "password"
+                name = "password"
+                class="form-control"
+                [(ngModel)]="u.password"
+                required/>
+        <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div> -->
+    </div>
+    <div class="form-group">
+        <label for="userType">Tipo de usuario</label>
+        <!-- [class.is-invalid]="!userType.valid && errorShow" -->
+        <select class="custom-select"
+                name="userType"
+                id="userType"
+                [(ngModel)]="userType"
+                required>
+            <option value="" selected disabled>Seleccione</option>
+            <option value="dueno">Dueño</option>
+            <option value="veterinario">Veterinario</option>
+            <option value="administrador">Administrador</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit"
+                class="btn btn-primary">Login</button>
+        <a routerLink="/register" class="btn btn-link">Register</a>
+    </div>
+    <div    class="alert alert-danger"
+            role="alert"
+            *ngIf = "errorShow">
+       {{ error }}
+    </div>
+</form>

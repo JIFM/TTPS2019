@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Raza</th>
+      <th>Sexo</th>
+      <th>Color</th>
+      <th>Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pet of pets">
+        <td>{{pet.nombre}}</td>
+        <td>{{pet.raza}}</td>
+        <td>{{pet.sexo}}</td>
+        <td>{{pet.color}}</td>
+        <td>{{pet.fotoMascota}}</td>
+    </tr>
+  </tbody>
+</table>
