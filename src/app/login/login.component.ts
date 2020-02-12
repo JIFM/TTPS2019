@@ -3,7 +3,6 @@ import { NgForm, FormsModule } from '@angular/forms';
 import { AuthService } from '../_services/authService';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { LoginUser } from '../_models/loginUser';
 import { User } from '../_models/user';
 
 

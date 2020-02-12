@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../_models/user';
 import { HttpHeaders } from '@angular/common/http';
-import { LoginUser } from '../_models/loginUser';
 
 const httpOptions = { headers: new HttpHeaders({  'Content-Type':  'application/json' })};
 
